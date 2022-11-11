@@ -497,27 +497,56 @@ class Funcionalidad {
 
 //para la logica hize una variable que guarda el valor adquirido por un prompt y muestra los temas disponibles que el usuario puede escoger
 
-alert('¿Listo?');
-let tema = parseInt(prompt('Elige un tema tipeando el numero: \n 1. HTML \n 2. CSS \n 3. ARTE \n 4. CIENCIA \n 5. HISTORIA \n 6. GEOGRAFIA \n 7. DEPORTE'));
-
-//este if valida el tema escogido y crea una variable donde manda a llamar el arreglo del tema con su metodo .map que recorre el arreglo y nos devuelve un objeto nuevo (Pregunta)
-if(tema === 1) {
-    var preguntas = html.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta));
-}else if(tema === 2) {
-    var preguntas = css.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta));
-}else if(tema === 3) {
-    var preguntas = arte.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta));
-}else if(tema === 4) {
-    var preguntas = ciencia.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta));
-}else if(tema === 5) {
-    var preguntas = historia.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta));
-}else if(tema === 6) {
-    var preguntas = geografia.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta));
-}else if(tema === 7) {
-    var preguntas = deporte.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta));
-}else {
-
+alert('listo')
+var preguntas
+function htmlCuestions() {
+    preguntas = html.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    principal()
 }
+const htmlTema = document.getElementById('htmlTema')
+htmlTema.addEventListener('click', htmlCuestions)
+
+function cssCuestions() {
+    preguntas = css.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    principal()
+}
+const cssTema = document.getElementById('cssTema')
+cssTema.onclick=cssCuestions
+
+function arteCuestions() {
+    preguntas = arte.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    principal()
+}
+const arteTema = document.getElementById('arteTema')
+arteTema.onclick=arteCuestions
+
+function cienciaCuestions() {
+    preguntas = ciencia.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    principal()
+}
+const cienciaTema = document.getElementById('cienciaTema')
+cienciaTema.onclick=cienciaCuestions
+
+function historiaCuestions() {
+    preguntas = historia.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    principal()
+}
+const historiaTema = document.getElementById('historiaTema')
+historiaTema.onclick=historiaCuestions
+
+function geografiaCuestions() {
+    preguntas = geografia.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    principal()
+}
+const geografiaTema = document.getElementById('geografiaTema')
+geografiaTema.onclick=geografiaCuestions
+
+function deporteCuestions() {
+    preguntas = deporte.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    principal()
+}
+const deporteTema = document.getElementById('deporteTema')
+deporteTema.onclick=deporteCuestions
 
 //ya con la variable preguntas definida por el tema escogido por el usuario, el objeto pregunta ha sido rellenado con los parametros del arreglo escogido por el usuario
 //creamos la funcion principal que se encargara de crear una partida con el tema escogido, esta funcion ejecuta una constante que a su vez crea una clase nueva juego con su parametro preguntas antes declarado
@@ -549,5 +578,3 @@ function principal() {
 
     renderizarPagina(juego, funcionalidad)
 }
-
-principal();

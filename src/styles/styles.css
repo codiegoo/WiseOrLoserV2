@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #444444;
+}
+body #juego {
+  margin: 5% auto;
+  width: 40%;
+  background: #171717;
+  border-radius: 1rem;
+  height: 30rem;
+  padding: 3rem;
+}
+body #juego #pregunta {
+  margin-bottom: 2rem;
+  font-family: sans-serif;
+  color: #DA0037;
+}
+body #juego #opciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #juego #opciones button {
+  width: 20rem;
+  height: 3.5rem;
+  margin-bottom: 2rem;
+  font-family: sans-serif;
+  border: none;
+  border-radius: 1rem;
+  background: #444444;
+  color: #EDEDED;
+}
+body #juego #opciones button:hover {
+  cursor: pointer;
+  background: #DA0037;
+  color: #EDEDED;
+}
+body .eleccion {
+  width: 40%;
+  height: 40rem;
+  background: #171717;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  margin: 5rem auto;
+}
+body .eleccion h2 {
+  font-family: sans-serif;
+  margin: 3rem auto;
+  color: #DA0037;
+}
+body .eleccion .opcionesTemas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .eleccion .opcionesTemas input {
+  padding: 0 0 0 0.5rem;
+  width: 20rem;
+  height: 2.5rem;
+  border-radius: 1rem;
+  border: none;
+  margin-bottom: 1.5rem;
+}
+body .eleccion .opcionesTemas input:focus {
+  outline: 2px solid #DA0037;
+}
+body .eleccion .opcionesTemas button {
+  border: none;
+  border-radius: 1rem;
+  width: 20rem;
+  height: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+body .eleccion .opcionesTemas button:hover {
+  cursor: pointer;
+  background: #DA0037;
+  color: #EDEDED;
+}/*# sourceMappingURL=styles.css.map */
