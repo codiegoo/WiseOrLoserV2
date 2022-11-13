@@ -460,7 +460,7 @@ class Funcionalidad {
      */
     mostrarPregunta(texto) {
         const preguntaTitulo = document.getElementById('pregunta')
-        preguntaTitulo.innerText = texto;
+        preguntaTitulo.innerText = texto
     }
 
     /**
@@ -481,13 +481,13 @@ class Funcionalidad {
     }
 
     /**
-     * 
+     *
      * @param {number} puntaje puntaje total
      */
     mostrarPuntuacion(puntaje) {
         const interfazFinal = `<h2>Resultado</h2> <h2>Tu puntuacion es de: ${puntaje} </h2>`
 
-        const elemento = document.getElementById('juego')
+        const elemento = document.querySelector('.eleccion')
         elemento.innerHTML = interfazFinal;
     }
 }
@@ -499,8 +499,10 @@ class Funcionalidad {
 
 alert('listo')
 var preguntas
+
 function htmlCuestions() {
     preguntas = html.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    document.querySelector('#opcionesTemas').classList.add("gosth")
     principal()
 }
 const htmlTema = document.getElementById('htmlTema')
@@ -508,6 +510,7 @@ htmlTema.addEventListener('click', htmlCuestions)
 
 function cssCuestions() {
     preguntas = css.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    document.querySelector('#opcionesTemas').classList.add("gosth")
     principal()
 }
 const cssTema = document.getElementById('cssTema')
@@ -515,6 +518,7 @@ cssTema.onclick=cssCuestions
 
 function arteCuestions() {
     preguntas = arte.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    document.querySelector('#opcionesTemas').classList.add("gosth")
     principal()
 }
 const arteTema = document.getElementById('arteTema')
@@ -522,6 +526,7 @@ arteTema.onclick=arteCuestions
 
 function cienciaCuestions() {
     preguntas = ciencia.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    document.querySelector('#opcionesTemas').classList.add("gosth")
     principal()
 }
 const cienciaTema = document.getElementById('cienciaTema')
@@ -529,6 +534,7 @@ cienciaTema.onclick=cienciaCuestions
 
 function historiaCuestions() {
     preguntas = historia.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    document.querySelector('#opcionesTemas').classList.add("gosth")
     principal()
 }
 const historiaTema = document.getElementById('historiaTema')
@@ -536,6 +542,7 @@ historiaTema.onclick=historiaCuestions
 
 function geografiaCuestions() {
     preguntas = geografia.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    document.querySelector('#opcionesTemas').classList.add("gosth")
     principal()
 }
 const geografiaTema = document.getElementById('geografiaTema')
@@ -543,10 +550,22 @@ geografiaTema.onclick=geografiaCuestions
 
 function deporteCuestions() {
     preguntas = deporte.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+    document.querySelector('#opcionesTemas').classList.add("gosth")
     principal()
 }
 const deporteTema = document.getElementById('deporteTema')
 deporteTema.onclick=deporteCuestions
+
+
+
+
+
+
+
+
+
+
+
 
 //ya con la variable preguntas definida por el tema escogido por el usuario, el objeto pregunta ha sido rellenado con los parametros del arreglo escogido por el usuario
 //creamos la funcion principal que se encargara de crear una partida con el tema escogido, esta funcion ejecuta una constante que a su vez crea una clase nueva juego con su parametro preguntas antes declarado

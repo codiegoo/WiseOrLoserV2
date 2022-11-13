@@ -4,36 +4,6 @@
   padding: 0
 body
   background: $color1
-
-  #juego
-    margin: 5% auto
-    width: 40%
-    background: $color
-    border-radius: 1rem
-    height: 30rem
-    padding: 3rem
-    #pregunta
-      margin-bottom: 2rem
-      font-family: sans-serif
-      color: $color2
-    #opciones
-      display: flex
-      flex-direction: column
-      align-items: center
-      justify-content: center
-      button
-        width: 20rem
-        height: 3.5rem
-        margin-bottom: 2rem
-        font-family: sans-serif
-        border: none
-        border-radius: 1rem
-        background: $color1
-        color: $color3
-      button:hover
-        cursor: pointer
-        background: $color2
-        color: $color3
   .eleccion
     width: 40%
     height: 40rem
@@ -47,7 +17,7 @@ body
       font-family: sans-serif
       margin: 3rem auto
       color: $color2
-    .opcionesTemas
+    #opcionesTemas
       display: flex
       flex-direction: column
       align-items: center
@@ -61,13 +31,41 @@ body
         margin-bottom: 1.5rem
       input:focus
         outline: 2px solid $color2
-      button
+      .btn
         border: none
         border-radius: 1rem
         width: 20rem
         height: 2.5rem
         margin-bottom: 1.5rem
+      .btn:hover
+        cursor: pointer
+        background: $color2
+        color: $color3
+    #gameChan
+      margin: auto 0
+      padding: 1em
+      #pregunta
+        text-align: center
+        margin-bottom: 4rem
+        font-family: sans-serif
+        color: $color2
+      #opciones
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+      button
+        width: 20rem
+        height: 3.5rem
+        margin-bottom: 2rem
+        font-family: sans-serif
+        border: none
+        border-radius: 1rem
+        background: $color1
+        color: $color3
       button:hover
         cursor: pointer
         background: $color2
         color: $color3
+    .gosth
+      display: none !important
