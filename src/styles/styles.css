@@ -14,7 +14,7 @@ body .eleccion {
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
-  margin: 5rem auto;
+  margin: 3rem auto;
 }
 body .eleccion h2 {
   font-family: sans-serif;
@@ -79,10 +79,22 @@ body .eleccion #gameChan button {
 body .eleccion #gameChan button:hover {
   cursor: pointer;
   background: #DA0037;
-  color: #EDEDED;
 }
 body .eleccion .gosth {
   display: none !important;
+}
+body .btnReload {
+  width: 20%;
+  height: 4rem;
+  border-radius: 1rem;
+  font-family: sans-serif;
+  color: #EDEDED;
+  background: #DA0037;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  bottom: 3.5rem;
+  left: 40%;
 }
 
 @media screen and (max-width: 1800px) {
@@ -99,7 +111,12 @@ body .eleccion .gosth {
   .eleccion {
     width: 70% !important;
   }
+}
+@media screen and (max-width: 800px) {
   .eleccion {
     width: 80% !important;
+  }
+  .eleccion #gameChan button:hover {
+    background: #444444 !important;
   }
 }/*# sourceMappingURL=styles.css.map */

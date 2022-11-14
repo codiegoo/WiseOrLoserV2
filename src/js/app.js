@@ -485,10 +485,11 @@ class Funcionalidad {
      * @param {number} puntaje puntaje total
      */
     mostrarPuntuacion(puntaje) {
-        const interfazFinal = `<h2>Resultado</h2> <h2>Tu puntuacion es de: ${puntaje} </h2>`
+        const interfazFinal = `<h2>Hey! ${userName}</h2> <h2>Tu puntuacion es de: ${puntaje} </h2>`
 
         const elemento = document.querySelector('.eleccion')
-        elemento.innerHTML = interfazFinal;
+        elemento.innerHTML = interfazFinal
+        elemento.innerHTML = btnNewGame
     }
 }
 
@@ -497,7 +498,13 @@ class Funcionalidad {
 
 //para la logica hize una variable que guarda el valor adquirido por un prompt y muestra los temas disponibles que el usuario puede escoger
 
-alert('listo')
+let userName = prompt('Introduce un nombre para jugar')
+if(userName==='') {
+    location.reload()
+}else {
+    alert('Bienvenid@: ' + userName + '\n¿eres lo suficientemente sabio?...perdedor😏')
+}
+
 var preguntas
 
 function htmlCuestions() {
@@ -557,6 +564,11 @@ const deporteTema = document.getElementById('deporteTema')
 deporteTema.onclick=deporteCuestions
 
 
+
+const btnReload = document.querySelector('.btnReload')
+btnReload.addEventListener('click', () => {
+    location.reload()
+})
 
 
 
