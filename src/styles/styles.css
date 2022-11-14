@@ -41,7 +41,7 @@ body .eleccion #opcionesTemas input:focus {
 body .eleccion #opcionesTemas .btn {
   border: none;
   border-radius: 1rem;
-  width: 20rem;
+  width: 70%;
   height: 2.5rem;
   margin-bottom: 1.5rem;
 }
@@ -67,7 +67,7 @@ body .eleccion #gameChan #opciones {
   justify-content: center;
 }
 body .eleccion #gameChan button {
-  width: 20rem;
+  width: 90%;
   height: 3.5rem;
   margin-bottom: 2rem;
   font-family: sans-serif;
@@ -83,4 +83,23 @@ body .eleccion #gameChan button:hover {
 }
 body .eleccion .gosth {
   display: none !important;
+}
+
+@media screen and (max-width: 1800px) {
+  .eleccion {
+    width: 50% !important;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .eleccion {
+    width: 60% !important;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .eleccion {
+    width: 70% !important;
+  }
+  .eleccion {
+    width: 80% !important;
+  }
 }/*# sourceMappingURL=styles.css.map */
