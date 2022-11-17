@@ -497,13 +497,14 @@ class Funcionalidad {
 
 
 //para la logica hize una variable que guarda el valor adquirido por un prompt y muestra los temas disponibles que el usuario puede escoger
-
+/***
 let userName = prompt('Introduce un nombre para jugar')
 if(userName==='') {
     location.reload()
 }else {
     alert('Bienvenid@: ' + userName + '\n¿eres lo suficientemente sabio?...perdedor😏')
 }
+ */
 
 var preguntas
 
@@ -608,4 +609,17 @@ function principal() {
     const funcionalidad = new Funcionalidad()
 
     renderizarPagina(juego, funcionalidad)
+}
+
+
+
+// darkMode
+
+
+const darkModeBtn = document.querySelector('#darkModeBtn')
+const body = document.body
+
+darkModeBtn.addEventListener('click', chanModeColor)
+function chanModeColor() {
+    body.classList.toggle('darkMode')
 }
