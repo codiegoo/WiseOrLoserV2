@@ -8,19 +8,27 @@ body {
 }
 body .eleccion {
   width: 40%;
-  height: auto;
+  height: 40rem;
   backdrop-filter: blur(10px);
-  background: rgba(126, 126, 126, 0.392);
+  background: rgba(126, 126, 126, 0.573);
   text-align: center;
   display: flex;
   flex-direction: column;
   border-radius: 1rem;
   margin: 1rem auto;
+  position: relative;
 }
 body .eleccion h2 {
   font-family: sans-serif;
   margin: 3rem auto;
   color: #DA0037;
+  grid-area: text;
+  font-family: "Sarpanch", sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  padding: 20px;
+  color: #DA0037;
+  text-shadow: 0vmin 0.2vmin 0 #EDEDED, 0vmin 0.4vmin 0 #444444;
 }
 body .eleccion #opcionesTemas {
   display: flex;
@@ -28,23 +36,14 @@ body .eleccion #opcionesTemas {
   align-items: center;
   justify-content: center;
 }
-body .eleccion #opcionesTemas input {
-  padding: 0 0 0 0.5rem;
-  width: 20rem;
-  height: 2.5rem;
-  border-radius: 1rem;
-  border: none;
-  margin-bottom: 1.5rem;
-}
-body .eleccion #opcionesTemas input:focus {
-  outline: 2px solid #DA0037;
-}
 body .eleccion #opcionesTemas .btn {
   border: none;
   border-radius: 1rem;
   width: 70%;
   height: 2.5rem;
   margin-bottom: 1.5rem;
+  background: #444444;
+  color: #EDEDED;
 }
 body .eleccion #opcionesTemas .btn:hover {
   cursor: pointer;
@@ -66,6 +65,13 @@ body .eleccion #gameChan #pregunta {
   font-family: sans-serif;
   font-size: 1.5rem;
   color: #DA0037;
+  grid-area: text;
+  font-family: "Sarpanch", sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  padding: 20px;
+  color: #DA0037;
+  text-shadow: 0vmin 0.2vmin 0 #EDEDED, 0vmin 0.4vmin 0 #444444;
 }
 body .eleccion #gameChan #opciones {
   width: 70%;
@@ -103,6 +109,34 @@ body .btnReload {
   display: block;
   margin: -3rem auto 2rem auto;
   position: relative;
+}
+body .inputName {
+  width: 40%;
+  height: 2rem;
+  margin: 5rem auto 0 auto;
+  position: relative;
+}
+body .btnJugar {
+  cursor: pointer;
+  width: 20%;
+  height: 4rem;
+  background: #DA0037;
+  color: #EDEDED;
+  border: none;
+  border-radius: 1rem;
+  margin: 2rem auto 0 auto;
+}
+body .textJugar {
+  font-family: sans-serif;
+  margin-top: 10rem !important;
+  color: #DA0037;
+  grid-area: text;
+  font-family: "Sarpanch", sans-serif;
+  font-size: 2rem;
+  margin: 0;
+  padding: 20px;
+  color: #DA0037;
+  text-shadow: 0vmin 0.2vmin 0 #EDEDED, 0vmin 0.4vmin 0 #444444;
 }
 
 @media screen and (max-width: 1800px) {
@@ -157,7 +191,18 @@ body .btnReload {
   background: url(../img/bgDark.jpg);
 }
 .darkMode .eleccion {
-  background: rgba(126, 126, 126, 0.1);
+  background: rgba(182, 182, 182, 0.501);
+}
+.darkMode .eleccion .btn {
+  background: #CFD2CF !important;
+  color: #DA0037 !important;
+}
+.darkMode .eleccion #gameChan button {
+  background: #CFD2CF;
+  color: #DA0037;
+}
+.darkMode .eleccion #gameChan button:hover {
+  color: #EDEDED;
 }
 .darkMode .bi-sun-fill {
   display: none;
@@ -190,4 +235,33 @@ body .btnReload {
   align-items: center;
   justify-content: center;
   margin: 0.5rem 0 0.5rem 0.5rem;
+}
+
+body #userLogin {
+  width: 100%;
+  height: 40rem;
+  background: #DA0037;
+  position: absolute;
+  top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body #userLogin h3 {
+  font-family: sans-serif;
+  color: #EDEDED;
+  margin: 1rem auto;
+}
+body #userLogin input {
+  margin: 1rem auto;
+}
+body #userLogin button {
+  margin: 1rem auto;
+  width: 6rem;
+  height: 3rem;
+  cursor: pointer;
+  background: #EDEDED;
+  border: none;
+  border-radius: 1rem;
 }/*# sourceMappingURL=styles.css.map */
