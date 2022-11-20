@@ -17,6 +17,7 @@ console.log(inputName)
 function jugar(){
     let name = document.querySelector('#inputName').value
     localStorage.setItem("nombre", name)
+
     if(name === ''){
 
     }else{
@@ -27,8 +28,6 @@ function jugar(){
 btnJugar.addEventListener('click', jugar)
 
 
-
-export let namePoint = localStorage.getItem("nombre")
 
 
 

@@ -1,4 +1,4 @@
-import { namePoint } from "./app.js";
+
 export class Pregunta {
 
   /**
@@ -95,6 +95,7 @@ export class Funcionalidad {
    * @param {number} puntaje puntaje total
    */
   mostrarPuntuacion(puntaje) {
+			let namePoint = localStorage.getItem("nombre")
       const interfazFinal = `<h2>Hey!</h2>${namePoint}<h2>Tu puntuacion es de: ${puntaje} </h2>`
 
       const elemento = document.querySelector('.eleccion')
