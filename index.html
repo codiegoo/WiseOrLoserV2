@@ -13,34 +13,42 @@
     <section class="eleccion">
         <section id="userLogin">
             <h3>Introduce un nombre!</h3>
-            <input type="text" id="inputName">
+            <input type="text" id="inputName" placeholder="Ejemplo: player1">
             <button id="startGame">Jugar</button>
         </section>
         <div id="opcionesTemas">
             <h2>Por favor elige un tema!</h2>
-            <button id="htmlTema" class="btn">Html</button>
-            <button id="cssTema" class="btn">Css</button>
-            <button id="arteTema" class="btn">Arte</button>
-            <button id="cienciaTema" class="btn">Ciencia</button>
-            <button id="historiaTema" class="btn">Historia</button>
-            <button id="geografiaTema" class="btn">Geografia</button>
-            <button id="deporteTema" class="btn">Deportes</button>
+            <div class="temaContainer t1"><img src="./src/img/programacion.jpg" alt=""><button id="tecnoTema" class="btn">Tecnologia</button></div>
+            <div class="temaContainer t2"><img src="./src/img/pintura.jpg" alt=""><button id="arteTema" class="btn">Arte</button></div>
+            <div class="temaContainer t3"><img src="./src/img/ciencia.jpg" alt=""><button id="cienciaTema" class="btn">Ciencia</button></div>
+            <div class="temaContainer t4"><img src="./src/img/historia.jpg" alt=""><button id="historiaTema" class="btn">Historia</button></div>
+            <div class="temaContainer t5"><img src="./src/img/geografia.jpg" alt=""><button id="geografiaTema" class="btn">Geografia</button></div>
+            <div class="temaContainer t6"><img src="./src/img/deporte.jpg" alt=""><button id="deporteTema" class="btn">Deportes</button></div>
         </div>
         <div id="gameChan">
-            <h3 id="pregunta"></h3>
-            <div id="opciones">
+            <div class="quizContainer">
+                <h3 id="pregunta"></h3>
+                <div id="opciones">
+                </div>
+                <div id="progress"></div>
             </div>
         </div>
     </section>
-    <button class="btnReload">Reiniciar partida</button>
+
     <div class="darkModeContainer">
         <div class="switch">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16" id="darkModeBtn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16" id="darkModeBtn">
             <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/></svg>
         </div>
     </div>
 
+    <div id="buttons" class="gosth">
+        <button id="btnRecargar" class="btnReload">Volver a jugar</button>
+    </div>
 
-<script src="./src/js/app.js" type="module"></script>
+
+<!-- javaScript app -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./src/js/app.js" type="module"></script>
 </body>
 </html>

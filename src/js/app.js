@@ -1,5 +1,4 @@
-import { css } from "./data.js";
-import { html } from "./data.js";
+import { tecnologia } from "./data.js";
 import { arte } from "./data.js";
 import { ciencia } from "./data.js";
 import { historia } from "./data.js";
@@ -10,9 +9,8 @@ import { Juego } from "./clases.js";
 import { Funcionalidad } from "./clases.js";
 
 
-let btnJugar = document.querySelector('#startGame')
 
-console.log(inputName)
+
 
 function jugar(){
     let name = document.querySelector('#inputName').value
@@ -22,41 +20,44 @@ function jugar(){
 
     }else{
         document.querySelector('#userLogin').classList.add("gosth")
+        recommend()
+        return(name)
     }
 
 }
+
+
+let btnJugar = document.querySelector('#startGame')
+function recommend() {
+    return new Promise((resolve, reject) => {
+        const nameValidate = localStorage.getItem("nombre")
+        if (nameValidate === ''){
+            reject(new Error('error'))
+        }else{
+            setTimeout(()=> {
+                resolve(Swal.fire({
+                    title: 'hey ' + nameValidate + '!',
+                    text: 'Suerte, puedes reiniciar el juego con el boton reiniciar partida y recuerda el boton DarkMode arriba a la izquierda!!',
+                    confirmButtonText: '👍'
+                }))
+            }, 1000)
+        }
+    })
+}
+
 btnJugar.addEventListener('click', jugar)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-var preguntas
-
-function htmlCuestions() {
-    preguntas = html.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
+let preguntas
+function tecnoCuestions() {
+    preguntas = tecnologia.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
     document.querySelector('#opcionesTemas').classList.add("gosth")
     principal()
 }
-const htmlTema = document.getElementById('htmlTema')
-htmlTema.onclick=htmlCuestions
+const tecnoTema = document.getElementById('tecnoTema')
+tecnoTema.onclick=tecnoCuestions
 
-function cssCuestions() {
-    preguntas = css.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
-    document.querySelector('#opcionesTemas').classList.add("gosth")
-    principal()
-}
-const cssTema = document.getElementById('cssTema')
-cssTema.onclick=cssCuestions
 
 function arteCuestions() {
     preguntas = arte.map(pregunta => new Pregunta(pregunta.pregunta, pregunta.opciones, pregunta.respuesta))
@@ -118,6 +119,7 @@ const renderizarPagina = (juego, funcionalidad) => {
             juego.adivina(opcionActual);
             renderizarPagina(juego, funcionalidad);
         });
+        funcionalidad.mostrarProgreso(juego.preguntaActual+1)
     }
 };
 
@@ -126,22 +128,23 @@ function principal() {
     const funcionalidad = new Funcionalidad()
 
     renderizarPagina(juego, funcionalidad)
+
 }
 
 
 
 // darkMode Function
-const darkModeBtn = document.querySelector('#darkModeBtn')
-const body = document.body
-
-darkModeBtn.addEventListener('click', chanModeColor)
 function chanModeColor() {
+    const body = document.body
     body.classList.toggle('darkMode')
 }
+const darkModeBtn = document.querySelector('#darkModeBtn')
+darkModeBtn.addEventListener('click', chanModeColor)
+
 
 
 // ReloadGame Function
-const btnReload = document.querySelector('.btnReload')
+const btnReload = document.querySelector('#btnRecargar')
 btnReload.addEventListener('click', () => {
     location.reload()
 })

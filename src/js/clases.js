@@ -14,7 +14,7 @@ export class Pregunta {
   }
 
   /**
-   * 
+   *
    * @param {string} opcion algun texto para adivinar
    * @returns {boolean} retorna true si la respuesta es correcta
    */
@@ -49,10 +49,10 @@ export class Juego {
    * @param {string} respuesta texto de la respuesta elegida
    */
   adivina(respuesta) {
-      if (this.numeroDePregunta().respuestaCorrecta(respuesta)) {
-          this.puntaje++
-      }
-          this.preguntaActual++
+    if (this.numeroDePregunta().respuestaCorrecta(respuesta)) {
+      this.puntaje+=100
+    }
+    this.preguntaActual++
   }
 
 
@@ -90,16 +90,28 @@ export class Funcionalidad {
           opcionesContenedor.append(button);
       }
   }
+
+
+  mostrarProgreso(preguntaActual){
+    const element = document.getElementById('progress')
+    element.innerHTML = `Pregunta ${preguntaActual} de 5`
+  }
+
+
+
+
   /**
    *
    * @param {number} puntaje puntaje total
    */
   mostrarPuntuacion(puntaje) {
-			let namePoint = localStorage.getItem("nombre")
-      const interfazFinal = `<h2>Hey!</h2>${namePoint}<h2>Tu puntuacion es de: ${puntaje} </h2>`
-
+	    let namePoint = localStorage.getItem("nombre")
+      const interfazFinal = `<h2 class="nameText">Hey \n ${namePoint}!</h2><h2 class="finalText">Tu puntuacion es de: ${puntaje} / 500 </h2>`
       const elemento = document.querySelector('.eleccion')
       elemento.innerHTML = interfazFinal
-      elemento.innerHTML = btnNewGame
+
+      document.querySelector('#buttons').classList.remove("gosth")
+
   }
+
 }

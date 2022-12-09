@@ -1,64 +1,13 @@
-export const css = [
+export const tecnologia = [
   {
-      pregunta: '¿cual de las siguientes opciones no sirve para estilizar una web?',
+      pregunta: '¿Que propiedad no representa un color?',
       opciones: [
-          'css',
-          'sass',
-          'stylus',
-          'c'
-      ],
-      respuesta: 'c'
-  },
-  {
-      pregunta: '¿Que significa las siglas "CSS" ?',
-      opciones: [
-          'hoja de estilo en cascada',
-          'cascading style sheets',
-          'ambas respuestas son correctas'
-      ],
-      respuesta: 'ambas respuestas son correctas'
-  },
-  {
-      pregunta: '¿Cuantos tipos de css hay?',
-      opciones: [
-          '2',
-          '10',
-          '5',
-          '7'
-      ],
-      respuesta: '5'
-  },
-  {
-    pregunta: '¿Que es un framework de css?',
-    opciones: [
-        'un lenguaje de programacion',
-        'una biblioteca de estilos prefabricados',
-        'un lenguaje de hojas en cascada',
-        'un editor de textos'
-    ],
-    respuesta: 'una biblioteca de estilos prefabricados'
-  },
-  {
-    pregunta: '¿Que propiedad no representa un color?',
-    opciones: [
         '#232323',
         'rgb()',
         'url()',
         'white'
-    ],
-    respuesta: 'url()'
-  }
-]
-export const html = [
-  {
-      pregunta: '¿Cuáles son las capas en las que puede dividirse una página Web?',
-      opciones: [
-          'capa de contenido',
-          'capa de presentacion',
-          'capa de comportamiento',
-          'todas las anteriores'
       ],
-      respuesta: 'todas las anteriores'
+      respuesta: 'url()'
   },
   {
       pregunta: '¿que significa HTML?',
@@ -81,14 +30,14 @@ export const html = [
       respuesta: '<img></img>'
   },
   {
-      pregunta: '¿que etiqueta permite conectar varios archivos html?',
+      pregunta: '¿cual de las siguientes opciones no sirve para estilizar una web?',
       opciones: [
-          '<section></section>',
-          '<footer></footer>',
-          '<link>',
-          '<script></script>'
+        'css',
+        'sass',
+        'stylus',
+        'c'
       ],
-      respuesta: '<link>'
+      respuesta: 'c'
   },
   {
       pregunta: '¿que define la etiqueta <title></title>?',
