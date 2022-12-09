@@ -291,6 +291,10 @@ body .finalText {
   background: #EDEDED;
   margin: 0.5rem 0 0.5rem 3.5rem;
 }
+.darkMode .nameText,
+.darkMode .finalText {
+  color: #EDEDED;
+}
 
 .darkModeContainer {
   width: 7rem;
